@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import NavEmployee from '../NavBar/navEmployee';
+import Copyright from '../Footer/footer';
+import Box from '@material-ui/core/Box';
 
 
 export default class productAdd extends React.Component {
@@ -54,7 +56,11 @@ export default class productAdd extends React.Component {
     return (
       <div className="Product">
         <NavEmployee />
-        <div>
+
+        <div style={{ marginTop: "114px" }}>
+          <div class="Header-Body container-fluid">
+            <h1 id="title" style={{ textShadow: "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black", color: "coral"}}>Product</h1>
+          </div>
           <div className="auth-wrapper">
             <div className="auth-inner">
               <form class="row g-3" onSubmit={this.handleSubmit}>
@@ -79,6 +85,13 @@ export default class productAdd extends React.Component {
             </div >
           </div >
         </div>
+
+        <div style={{ backgroundColor: "rgb(211,211,211)" }}>
+          <Box pt={3}>
+            <Copyright />
+          </Box>
+        </div>
+
       </div>
     )
   }

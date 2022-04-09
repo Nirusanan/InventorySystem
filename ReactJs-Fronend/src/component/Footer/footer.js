@@ -5,7 +5,7 @@ import {Link} from '@material-ui/core';
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="textSecondary" align="center">
+        <Typography variant="body2" weight="bold" align="center">
             {'Copyright © '}
             <Link color="inherit" to="/">
                 The SPAS

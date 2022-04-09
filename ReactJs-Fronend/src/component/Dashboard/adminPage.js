@@ -1,5 +1,4 @@
 import React from 'react';
-// import NavBar from './navBar';
 import SPAS from './SPAS';
 import NavAdmin from '../NavBar/navAdmin';
 import Copyright from '../Footer/footer';
@@ -10,7 +9,7 @@ function adminPage() {
         <div>
             <NavAdmin />
             <SPAS />
-            <Box pt={5}>
+            <Box pt={3} style={{ backgroundColor: "rgb(211,211,211)" }}>
                 <Copyright/>
             </Box>
             

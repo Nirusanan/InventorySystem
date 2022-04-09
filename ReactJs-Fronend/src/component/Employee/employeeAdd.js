@@ -3,6 +3,8 @@ import axios from 'axios';
 import NavAdmin from '../NavBar/navAdmin';
 import { useFormik } from 'formik';
 import * as yup from 'yup';
+import Copyright from '../Footer/footer';
+import Box from '@material-ui/core/Box';
 
 function EmployeeAdd(props) {
 
@@ -52,151 +54,166 @@ function EmployeeAdd(props) {
 
 
   return (
-    <div className='Employee'>
+    <div >
       <NavAdmin />
 
-      <div className="auth-wrapper">
-        <div className="auth-inner">
-          <form autoComplete="off" onSubmit={formik.handleSubmit}>
-            <h3> Add Employee </h3>
+      <div>
 
-            <div class="mb-2 row">
-              <label class="col-sm-3 col-form-label">Email: </label>
-              <div class="col-sm-9">
-                <input
-                  className="form-control"
-                  type="text"
-                  name="email"
-                  onChange={formik.handleChange}
-                  value={formik.values.email}
-                />
-                {formik.errors.email ?
-                  <div className="text-danger">{formik.errors.email}</div>
-                  : null
-                }
-              </div>
-            </div>
-
-            <div class="mb-2 row">
-              <label class="col-sm-3 col-form-label">Password: </label>
-              <div class="col-sm-9">
-                <input
-                  className="form-control"
-                  type="text"
-                  name="password"
-                  onChange={formik.handleChange}
-                  value={formik.values.password}
-                />
-                {formik.errors.password ?
-                  <div className="text-danger">{formik.errors.password}</div>
-                  : null
-                }
-              </div>
-            </div>
-
-            <div class="mb-2 row">
-              <label class="col-sm-3 col-form-label">Name: </label>
-              <div class="col-sm-9">
-                <input
-                  className="form-control"
-                  type="text"
-                  name="name"
-                  onChange={formik.handleChange}
-                  value={formik.values.name}
-                />
-                {formik.errors.name ?
-                  <div className="text-danger">{formik.errors.name}</div>
-                  : null
-                }
-              </div>
-            </div>
-
-
-            <div class="mb-2 row">
-              <label class="col-sm-3 col-form-label">Address: </label>
-              <div class="col-sm-9">
-                <input
-                  className="form-control"
-                  type="text"
-                  name="address"
-                  onChange={formik.handleChange}
-                  value={formik.values.address}
-                />
-                {formik.errors.address ?
-                  <div className="text-danger">{formik.errors.address}</div>
-                  : null
-                }
-              </div>
-            </div>
-
-            <div class="mb-2 row">
-              <label class="col-sm-3 col-form-label">Mobile: </label>
-              <div class="col-sm-9">
-                <input
-                  className="form-control"
-                  type="number"
-                  name="mobile"
-                  onChange={formik.handleChange}
-                  value={formik.values.mobile}
-                />
-                {formik.errors.mobile ?
-                  <div className="text-danger">{formik.errors.mobile}</div>
-                  : null
-                }
-              </div>
-            </div>
-
-            <div class="mb-2 row">
-              <label class="col-sm-3 col-form-label">Age: </label>
-              <div class="col-sm-9">
-                <input
-                  className="form-control"
-                  type="number"
-                  name="age"
-                  onChange={formik.handleChange}
-                  value={formik.values.age}
-                />
-              </div>
-            </div>
-
-            <div class="mb-2 row">
-              <label class="col-sm-3 col-form-label">Admin: </label>
-              <div class="col-sm-9">
-                <input
-                  className="form-control"
-                  type="number"
-                  name="admin"
-                  onChange={formik.handleChange}
-                  value={formik.values.admin}
-                />
-                {formik.errors.admin ?
-                  <div className="text-danger">{formik.errors.admin}</div>
-                  : null
-                }
-              </div>
-            </div>
-
-            <div class="mb-2 row">
-              <label class="col-sm-3 col-form-label">CreatedOn: </label>
-              <div class="col-sm-9">
-                <input
-                  className="form-control"
-                  type="date"
-                  name="createdOn"
-                  onChange={formik.handleChange}
-                  value={formik.values.createdOn}
-                />
-                {formik.errors.createdOn ?
-                  <div className="text-danger">{formik.errors.createdOn}</div>
-                  : null
-                }
-              </div>
-            </div>
-
-            <button className="btn btn-primary">Submit</button>
-
-          </form>
+        <div class="Header-Body">
+          <h1 id="title" style={{ textShadow: "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black", color: "coral" }}>Employee</h1>
         </div>
+
+        <div className='Employee'>
+          <div className="auth-wrapper">
+            <div className="auth-inner">
+              <form autoComplete="off" onSubmit={formik.handleSubmit}>
+                <h3> Add Employee </h3>
+
+                <div class="mb-2 row">
+                  <label class="col-sm-3 col-form-label">Email: </label>
+                  <div class="col-sm-9">
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="email"
+                      onChange={formik.handleChange}
+                      value={formik.values.email}
+                    />
+                    {formik.errors.email ?
+                      <div className="text-danger">{formik.errors.email}</div>
+                      : null
+                    }
+                  </div>
+                </div>
+
+                <div class="mb-2 row">
+                  <label class="col-sm-3 col-form-label">Password: </label>
+                  <div class="col-sm-9">
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="password"
+                      onChange={formik.handleChange}
+                      value={formik.values.password}
+                    />
+                    {formik.errors.password ?
+                      <div className="text-danger">{formik.errors.password}</div>
+                      : null
+                    }
+                  </div>
+                </div>
+
+                <div class="mb-2 row">
+                  <label class="col-sm-3 col-form-label">Name: </label>
+                  <div class="col-sm-9">
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="name"
+                      onChange={formik.handleChange}
+                      value={formik.values.name}
+                    />
+                    {formik.errors.name ?
+                      <div className="text-danger">{formik.errors.name}</div>
+                      : null
+                    }
+                  </div>
+                </div>
+
+
+                <div class="mb-2 row">
+                  <label class="col-sm-3 col-form-label">Address: </label>
+                  <div class="col-sm-9">
+                    <input
+                      className="form-control"
+                      type="text"
+                      name="address"
+                      onChange={formik.handleChange}
+                      value={formik.values.address}
+                    />
+                    {formik.errors.address ?
+                      <div className="text-danger">{formik.errors.address}</div>
+                      : null
+                    }
+                  </div>
+                </div>
+
+                <div class="mb-2 row">
+                  <label class="col-sm-3 col-form-label">Mobile: </label>
+                  <div class="col-sm-9">
+                    <input
+                      className="form-control"
+                      type="number"
+                      name="mobile"
+                      onChange={formik.handleChange}
+                      value={formik.values.mobile}
+                    />
+                    {formik.errors.mobile ?
+                      <div className="text-danger">{formik.errors.mobile}</div>
+                      : null
+                    }
+                  </div>
+                </div>
+
+                <div class="mb-2 row">
+                  <label class="col-sm-3 col-form-label">Age: </label>
+                  <div class="col-sm-9">
+                    <input
+                      className="form-control"
+                      type="number"
+                      name="age"
+                      onChange={formik.handleChange}
+                      value={formik.values.age}
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-2 row">
+                  <label class="col-sm-3 col-form-label">Admin: </label>
+                  <div class="col-sm-9">
+                    <input
+                      className="form-control"
+                      type="number"
+                      name="admin"
+                      onChange={formik.handleChange}
+                      value={formik.values.admin}
+                    />
+                    {formik.errors.admin ?
+                      <div className="text-danger">{formik.errors.admin}</div>
+                      : null
+                    }
+                  </div>
+                </div>
+
+                <div class="mb-2 row">
+                  <label class="col-sm-3 col-form-label">CreatedOn: </label>
+                  <div class="col-sm-9">
+                    <input
+                      className="form-control"
+                      type="date"
+                      name="createdOn"
+                      onChange={formik.handleChange}
+                      value={formik.values.createdOn}
+                    />
+                    {formik.errors.createdOn ?
+                      <div className="text-danger">{formik.errors.createdOn}</div>
+                      : null
+                    }
+                  </div>
+                </div>
+
+                <button className="btn btn-primary">Submit</button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{ backgroundColor: "rgb(211,211,211)" }}>
+        <Box pt={3}>
+          <Copyright />
+        </Box>
       </div>
 
     </div>
