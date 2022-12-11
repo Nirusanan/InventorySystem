@@ -1,9 +1,9 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import FirstImg from './1.jpg';
-import ThirdImg from './3.jpg';
-import FourthImg from './4.jpg';
+import FirstImg from '../../assets/2.jpg';
+import ThirdImg from '../../assets/3.jpg';
+import FourthImg from '../../assets/4.jpg';
 
 function SPAS() {
     return (
@@ -15,25 +15,25 @@ function SPAS() {
                     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src={FirstImg} class="d-block w-100" alt="" height={490} />
+                    <div class="carousel-item active" data-bs-interval="2000">
+                        <img src={FirstImg} class="d-block w-100" alt="" height={500} />
                         <div class="carousel-caption d-none d-md-block">
-                            <h5 class="text-dark">Association Rules Generation</h5>
-                            {/* <p>Some representative placeholder content for the first slide.</p> */}
+                            <h5 class="text-dark">Suggest Products</h5>
+                            
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src={FourthImg} class="d-block w-100" alt="" height={490}/>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src={FourthImg} class="d-block w-100" alt="" height={500}/>
                         <div class="carousel-caption d-none d-md-block">
                             <h5 class="text-warning"><b>Customer Loyalty Analytics </b></h5>
-                            {/* <p >Some representative placeholder content for the second slide.</p> */}
+                            
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <img src={ThirdImg} class="d-block w-100" alt="" height={490}/>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src={ThirdImg} class="d-block w-100" alt="" height={500}/>
                         <div class="carousel-caption d-none d-md-block">
                             <h5 class="text-primary">Procurement Forecasting</h5>
-                            {/* <p>Some representative placeholder content for the third slide.</p> */}
+                            
                         </div>
                     </div>
                 </div>

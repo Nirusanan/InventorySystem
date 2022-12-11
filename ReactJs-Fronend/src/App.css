@@ -1,38 +1,315 @@
 .App {
   text-align: center;
-  background-image: url('./assets/1\ .jpg')
+}
+
+.Login{
+  text-align: center;
+  width: 100%;
+}
+.type-spas{
+  background-color: #121215;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 450px;
+  opacity: 1;
+}
+
+.typing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: #4FC3F7;
+  animation: cursorBlink 0.8s steps(3) infinite
+}
+
+@keyframes cursorBlink {
+
+  0%,
+  75% {
+      opacity: 1
+  }
+
+  76%,
+  100% {
+      opacity: 0
+  }
+}
+
+.typing {
+  position: relative;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #3333)
+}
+
+.typing h2 {
+  position: relative;
+  color: #4FC3F7;
+  letter-spacing: 5px;
+  font-size: 2rem;
+  overflow: hidden;
+  margin-bottom: 0;
+  animation: type 5s steps(20) infinite
+}
+
+@keyframes type {
+
+  0%,
+  100% {
+      width: 0px
+  }
+
+  30%,
+  60% {
+      width: 800px
+  }
+}
+
+@media(max-width: 330px) {
+  .typing h2 {
+      font-size: 3rem;
+      animation: type 5s steps(10) infinite
+  }
+
+  @keyframes type {
+
+      0%,
+      100% {
+          width: 0px
+      }
+
+      30%,
+      60% {
+          width: 305px
+      }
+  }
+}
+
+.Login-style{
+  background-image: url('./assets/1\ .jpg');
+  /* height: '800px'; */
+  height: 80%;
 }
 
 .Product {
   text-align: center;
   background-image: url('./assets/product.jpg');
-  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* height: 100%; */
 
 }
 
+.ProductView{
+  background-color: gold;
+  background-image: url("./assets/product4.png"), url("./assets/product1.png"), url("./assets/download.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position:left, center, right bottom;
+  background-size: 40% 120%, 40% 130%, 40% 50%;
+  height: 400px;
+}
+
+@media screen and (max-width: 650px) {
+  .ProductView {
+    background-size: 50% 90%, 50% 110%, 40% 40%;
+   
+  }
+}
+
+.login-footer{
+  background-color: rgb(209, 208, 233);
+  width: 100%;
+  height: 50%;
+}
+
+.login-footer h4{
+  padding-top: 10px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+@media screen and (max-width: 770px) {
+  .login-footer {
+   height: 98%;
+  }
+}
+
+.product-category{
+  background-color: rgb(228, 247, 247);
+  height: 400px;
+}
+.product-category h4{
+  padding-top: 20px;
+  padding-left: 40%;
+}
+
+.img-hover-zoom {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+.img-hover-zoom img:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 990px) {
+  .img-hover-zoom img{
+    width: 180px;
+    height: 180px;
+  }
+  .img-hover-zoom {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+
+@media screen and (max-width: 770px) {
+  .product-category {
+   height: 800px;
+  }
+}
+
+
+.InvoiceView{
+  background-color: rgb(76, 25, 218);
+  background-image: url("./assets/invoice.png"), url("./assets/pro2.png"), url("./assets/loyaltyCard.png");
+  background-repeat: no-repeat, no-repeat,  no-repeat;
+  background-position:left, center, right;
+  background-size: 25% 80%, 70% 120%, 30% 70%;
+  height: 350px;
+  
+}
+
+
 .Employee {
   background-color: gold;
+  background-image: url("./assets/fullemployee.png");
+  background-repeat: no-repeat;
+  /* background-position: right top;  */
+  /* margin-left: 200px; */
   /* height: 148%; */
 }
 
 .Customer {
   background-image: url('./assets/customer.jpg');
-  height: 110%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.EditCustomer {
-  background-image: url('./assets/2.jpg');
-  height: 100%;
+.CustomerView{
+  background-image: url('./assets/customers.jpg');
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  height: 470px;
+  background-size: 100% 130%;
+}
+
+@media screen and (max-width: 642px) {
+  .CustomerView {
+    background-size: 100% 110%;
+   padding-top: 30px;
+   height: 500px;
+  }
+}
+
+
+
+.Header-Body{
+  background-color: lightblue;
+  padding: 4px;
+  text-align: center; 
+}
+
+@media screen and (max-width: 642px) {
+  .Header-Body {
+    background-color: lightgreen;
+    padding-top: 30px;
+  }
+}
+
+.employee-body{
+  background-color: rgb(240, 205, 92);
+  padding: 10px;
+  text-align: center;
+}
+
+.segment-img{
+  background-image: url('./assets/loyalty.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  
 }
 
 .invoice-inner{
-    width: 1250px;
+    width: 90%;
     margin: auto;
     background: #a38b8b;
     box-shadow: 0px 14px 80px rgba(5, 1, 19, 0.2);
-    padding: 40px 55px 45px 55px;
+    padding: 40px 95px 35px 40px;
     border-radius: 15px;
     transition: all .3s; 
+}
+
+.invoice-offer{
+    background-image: url('./assets/customer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 20px;
+    height: 70%;
+}
+
+.invoice-offer h5{
+  text-align: center;
+}
+
+/* .ProcurementHeader{
+  background-image: url('./assets/procurement.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 200px;
+  
+}
+
+.ProcurementBody{
+  background-color: rgb(161, 139, 109);
+  background-size: cover;
+  height: 480px;
+  padding: 10px;
+  padding-top: 25px;
+  margin: 20px;
+  border-radius: 1%;
+} */
+
+.ProcurementHeader{
+  background-image: url('./assets/procurement.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 900px;
+  padding: 15px;
+  padding-top: 10%;
+  background-attachment: fixed;
+  
+}
+
+.ProcurementBody{
+  background-color: rgb(161, 139, 109);
+  background-size: cover;
+  height: 520px;
+  padding: 10px;
+  border-radius: 1%;
 }
 
 .App-logo {

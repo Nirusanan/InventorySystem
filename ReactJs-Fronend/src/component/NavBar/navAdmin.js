@@ -5,17 +5,19 @@ import AdminImg from './Admin2.png';
 function NavAdmin() {
     return (
 
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar sticky-top navbar-dark bg-dark" >
             <ul class="nav nav-tabs">
                 <li class="nav-item">
-                    {/* <a class="nav-link active" aria-current="page" href="#">SPAS</a> */}
-                    <Link class="nav-link active" aria-current="page" to="/admin">SPAS</Link>
+                    <Link class="nav-link active bi bi-house-fill" aria-current="page" to="/admin"> Home</Link>
                 </li>
                 <li class="nav-item">
-                    <Link class="nav-link" to="/employeeview">Employee</Link>
+                    <Link class="nav-link" style={{color:'blue'}} to="/employeeview">Employee</Link>
                 </li>
                 <li class="nav-item">
-                    <Link class="nav-link" to="/segment">Customer Segment</Link>
+                    <Link class="nav-link" style={{color:'blue'}} to="/segment">Customer Segment</Link>
+                </li>
+                <li class="nav-item">
+                    <Link class="nav-link" style={{color:'blue'}} to="/forecast">Forecasting</Link>
                 </li>
 
             </ul>
@@ -28,14 +30,10 @@ function NavAdmin() {
                 
                 </div>
             </div>
-            {/* <div class="d-flex align-items-center">
-                    <h3 class="text-success">Admin</h3>
-                </div> */}
+            
 
-            <div class="d-flex ">
-                <Link class="link-danger" to="/">Sign Out</Link>
-
-
+            <div class="d-flex" style={{paddingRight: "20px"}}>
+                <Link class="link-danger" style={{textDecoration: "none", display: "inline",width: "100px",textAlign: "center", backgroundColor: "rgb(34, 94, 46)", borderRadius: "20px", padding: "4px"}} to="/" onClick={() =>localStorage.clear()}>Sign Out</Link> 
             </div>
 
         </nav>
